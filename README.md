@@ -1,1 +1,1 @@
-Here I'll be posting some Solutions to leetcode problems.
+Here I'll be posting more Solutions to leetcode problems.
