@@ -5,7 +5,7 @@ class Solution:
         
         for row in range(len(matrix)):
             for col in range(len(matrix[0])):
-                if matrix[row][row] == "1":
+                if matrix[row][col] == "1":
                     dp[row + 1][col + 1] = 1 + min(dp[row][col + 1], dp[row + 1][col], dp[row][col])
                 maximum = max(maximum, dp[row + 1][col + 1])
                 
