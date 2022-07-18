@@ -4,9 +4,9 @@ class Solution:
         maximum = 0
         
         for row in range(len(matrix)):
-            for bit in range(len(matrix[0])):
-                if matrix[row][bit] == "1":
-                    dp[row + 1][bit + 1] = 1 + min(dp[row][bit + 1], dp[row + 1][bit], dp[row][bit])
-                maximum = max(maximum, dp[row + 1][bit + 1])
+            for col in range(len(matrix[0])):
+                if matrix[row][row] == "1":
+                    dp[row + 1][col + 1] = 1 + min(dp[row][col + 1], dp[row + 1][col], dp[row][col])
+                maximum = max(maximum, dp[row + 1][col + 1])
                 
         return maximum*maximum
